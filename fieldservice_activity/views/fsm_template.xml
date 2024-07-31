@@ -9,8 +9,8 @@
                 <page string="Activities">
                     <field name="temp_activity_ids" nolabel="1">
                         <tree editable="bottom">
-                            <field name="sequence" widget="handle" readonly="state not in ['todo']" />
-                            <field name="name" />
+                            <field name="sequence" widget="handle" />
+                            <field name="name" readonly="state not in ['todo']" />
                             <field name="required" readonly="state not in ['todo']" />
                             <field name="ref" readonly="state not in ['todo']" />
                             <field name="completed" invisible="1" />

@@ -12,15 +12,14 @@ class FSMActivity(models.Model):
         required=True
     )
     required = fields.Boolean(
-        default=False,
-        readonly=True
+        default=False
     )
     sequence = fields.Integer()
     completed = fields.Boolean(default=False)
     completed_on = fields.Datetime(readonly=True)
     completed_by = fields.Many2one("res.users", readonly=True)
     ref = fields.Char(
-        "Reference", readonly=True
+        "Reference"
     )
     fsm_order_id = fields.Many2one("fsm.order", "FSM Order")
     fsm_template_id = fields.Many2one("fsm.template", "FSM Template")
