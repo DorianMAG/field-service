@@ -15,7 +15,7 @@
                         class="oe_highlight"
                         type="object"
                         groups="fieldservice.group_fsm_user"
-                        invisible="stage_id.is_closed"
+                        invisible="stage_id in [%(fieldservice.fsm_stage_completed)d, %(fieldservice.fsm_stage_cancelled)d]"
                     />
                     <button
                         id="action_cancel"
@@ -23,7 +23,7 @@
                         string="Cancel Order"
                         type="object"
                         groups="fieldservice.group_fsm_dispatcher"
-                        invisible="stage_id.is_closed"
+                        invisible="stage_id in [%(fieldservice.fsm_stage_completed)d, %(fieldservice.fsm_stage_cancelled)d]"
                     />
                     <field
                         name="stage_id"
